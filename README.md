@@ -7,7 +7,7 @@ This is a tool for the irritating watchguard problem on GPRA-IITJ network.
 To start using the tool instantly:
 
 * Fill up the **config.json** file with valid [username, password] combinations.
-* `cd` to the repository directory and run `python wgtool.py` in the command line.
+* `cd` to the repository directory and run `python wgtool.py &` in the command line.
 
 This will add a system tray icon and start the tool in `Auto` mode.
 
