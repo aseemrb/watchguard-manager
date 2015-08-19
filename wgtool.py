@@ -83,7 +83,7 @@ def main():
     indicator.set_menu(BuildMenu())
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     notify.init(APPINDICATOR_ID)
-    LoopCheck
+    LoopCheck()
     gobject.timeout_add(AUTOTIMEOUT, LoopCheck)
     gtk.main()
 
