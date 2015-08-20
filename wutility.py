@@ -7,7 +7,7 @@ import requests
 import httplib
 import os
 from urllib import urlencode
-from urllib2 import urlopen
+from urllib2 import *
 from os import system, devnull, path
 from sys import argv, exit
 from time import sleep
@@ -107,6 +107,7 @@ def Logout():
 def InternetOn():
     try:
         response = urlopen('http://google.com',timeout=2)
+        print response
         return True
-    except:
+    except URLError, e:
         return False
