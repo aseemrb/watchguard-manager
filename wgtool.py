@@ -40,7 +40,7 @@ def WGAuto(source):
 
 def LoopCheck():
     global AUTOMODE
-    if InternetOn():
+    if not InternetOn():
         if not CheckStatus():
             Login()
     return AUTOMODE
