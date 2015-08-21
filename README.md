@@ -36,3 +36,16 @@ Some of the primary modules and methods used are:
 
 To run this app on startup, we can write a new small `wgtool.conf` file and put it in /etc/init to hook
 into the upstart service that runs services on startup. Then we can also `sudo service wgtool start/stop`.
+
+## Configuration for the .conf file
+
+There is file named `watch.conf` has been added to configure this according to your script location just change the 
+path in the command attribute
+
+For running this conf file you will have install supervisior.
+For Debian User:
+`sudo apt-get install supervisor`
+
+and put this conf file in the folder `/etc/supervisor/conf.d`
+
+.

@@ -7,7 +7,7 @@ import requests
 import httplib
 import os
 from urllib import urlencode
-from urllib2 import urlopen
+from urllib2 import *
 from os import system, devnull, path
 from sys import argv, exit
 from time import sleep
@@ -108,5 +108,7 @@ def InternetOn():
     try:
         response = urlopen('http://google.com',timeout=2)
         return True
-    except:
+    except URLError, e:
+        if str(e).find("SSL") != -1:
+            return True
         return False
