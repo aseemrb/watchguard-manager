@@ -107,7 +107,8 @@ def Logout():
 def InternetOn():
     try:
         response = urlopen('http://google.com',timeout=2)
-        print response
         return True
     except URLError, e:
+        if str(e).find("SSL") != -1:
+            return True
         return False
